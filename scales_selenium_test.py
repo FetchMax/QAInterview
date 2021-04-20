@@ -11,6 +11,9 @@ url = "http://ec2-54-208-152-154.compute-1.amazonaws.com/"
 driver.get(url)
 
 # This uses what's called an x-path to find the value representing the fake bar of gold.
+# Thee reason we know this is the fake bar is it is represented by the attribute data-value of 0
+# while all the real bars are a value of 1. No matter the index, selenium will always select the
+# value with the attribute of 0.
 path = "//*[@data-value='0']"
 
 # This is where we navigate to the value we are seeking for this test.
